@@ -437,18 +437,20 @@
       grid-template-columns: 1fr 1fr;
       gap: 0;
       border-radius: 6px;
-      overflow: hidden;
+      overflow: visible;   /* was hidden — was clipping tall serif numbers */
       margin-bottom: 10px;
     }
     .retire-bad {
       background: rgba(178,34,52,0.08);
-      padding: 10px 10px;
+      padding: 10px 10px 12px;
       text-align: center;
+      border-radius: 6px 0 0 6px;
     }
     .retire-good {
       background: rgba(25,79,144,0.1);
-      padding: 10px 10px;
+      padding: 10px 10px 12px;
       text-align: center;
+      border-radius: 0 6px 6px 0;
     }
     .retire-label {
       font-family: var(--sans);
@@ -462,9 +464,9 @@
     .retire-good .retire-label { color: var(--blue); }
     .retire-amount {
       font-family: var(--serif);
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
-      line-height: 1;
+      line-height: 1.25;
       margin-bottom: 3px;
     }
     .retire-bad .retire-amount { color: var(--red); }
@@ -647,8 +649,8 @@
     .villain-title   { font-size: 21px; }
     .villain-sub     { font-size: 11px; line-height: 1.5; }
     .retire-label    { font-size: 7px; }
-    .retire-amount   { font-size: 24px; }
-    .retire-desc     { font-size: 8.5px; line-height: 1.35; }
+    .retire-amount   { font-size: 20px; line-height: 1.2; }
+    .retire-desc     { font-size: 8px; line-height: 1.35; }
     .compare-table th { font-size: 10px; padding: 7px 10px; }
     .compare-table td { font-size: 11px; padding: 7px 10px; line-height: 1.5; }
     .villain-stat     { font-size: 11px; padding: 10px 12px; }
