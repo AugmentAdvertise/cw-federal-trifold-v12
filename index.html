@@ -495,131 +495,108 @@
 
     /* ── INSIDE RIGHT — Family + Success + CTA ── */
     /* v10 fix: single unified navy background — no hard seam between sections */
+    /* ══ PANEL 4 — Full bleed hero image, content layered on top ══
+       Family photo fills the entire panel.
+       Strong gradient overlay — clear at top, opaque navy at bottom 55%.
+       Hero narrative lives in the overlay. No cropped heads. No dead space.
+    */
     .p-cta {
-      display: flex;
-      flex-direction: column;
+      position: relative;
+      overflow: hidden;
       background: var(--blue-deep);
     }
 
-    /* Family photo at top */
+    /* Full-panel background image — show the full family, no cropping */
     .cta-photo {
-      position: relative;
-      height: 2.0in;
-      flex-shrink: 0;
-      overflow: hidden;
+      position: absolute;
+      inset: 0;
+      z-index: 0;
     }
     .cta-photo-img {
       position: absolute; inset: 0;
       background-image: url('assets/family-flag.jpg');
       background-size: cover;
-      background-position: center 25%;
+      background-position: center 20%;  /* shows heads, not just bodies */
     }
-    /* Fade into deep navy — matches the background below seamlessly */
+    /* Gradient: transparent at top → solid navy from 40% down */
     .cta-photo-fade {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 90px;
-      background: linear-gradient(180deg, transparent 0%, var(--blue-deep) 100%);
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(8,30,63,0.10) 0%,
+        rgba(8,30,63,0.20) 25%,
+        rgba(8,30,63,0.75) 45%,
+        rgba(8,30,63,0.95) 60%,
+        rgba(8,30,63,1.00) 75%
+      );
     }
-    .cta-photo-caption {
-      position: absolute;
-      bottom: 14px; left: 0; right: 0;
-      text-align: center; z-index: 2;
-    }
-    .cta-photo-caption span {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 14px;
-      color: rgba(255,255,255,0.95);
-      text-shadow: 0 1px 8px rgba(0,0,0,0.7);
-    }
+    .cta-photo-caption { display: none; } /* not needed — overlay text replaces it */
 
-    /* Success panel — transparent background, flows into navy seamlessly */
+    /* All content sits above the photo overlay */
     .cta-success {
-      background: transparent;
-      padding: 8px 18px 6px;
+      position: relative;
+      z-index: 2;
+      margin-top: 2.6in;  /* push content below the visible photo area */
+      padding: 10px 20px 8px;
       color: var(--white);
-    }
-    .success-stars { font-size: 8px; letter-spacing: 8px; color: var(--gold); margin-bottom: 5px; text-align: center; }
-    .success-title { font-family: var(--serif); font-size: 16px; font-weight: 500; color: var(--white); line-height: 1.2; margin-bottom: 7px; text-align: center; }
-    .success-item { display: flex; gap: 8px; margin-bottom: 4px; font-size: 10.5px; line-height: 1.4; align-items: flex-start; color: var(--white); }
-    .s-mark { flex-shrink: 0; width: 14px; height: 14px; border-radius: 50%; background: rgba(197,165,90,0.22); color: var(--gold-lt); font-size: 7px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
-
-    /* Lead magnet CTA — transparent, same navy background */
-    /* ── Panel 4 CTA bottom section — space-between fills the panel evenly ── */
-    .cta-download {
-      flex: 1;
       background: transparent;
-      padding: 10px 18px 16px;
+    }
+    .success-stars { font-size: 9px; letter-spacing: 10px; color: var(--gold); margin-bottom: 6px; text-align: center; }
+    .success-title {
+      font-family: var(--serif);
+      font-size: 17px; font-weight: 500; color: var(--white);
+      line-height: 1.25; margin-bottom: 8px; text-align: center;
+    }
+    .success-item { display: flex; gap: 9px; margin-bottom: 5px; font-size: 10.5px; line-height: 1.45; align-items: flex-start; color: var(--white); }
+    .s-mark { flex-shrink: 0; width: 14px; height: 14px; border-radius: 50%; background: rgba(197,165,90,0.25); color: var(--gold-lt); font-size: 7px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+
+    /* Gold divider */
+    .cta-divider {
+      position: relative; z-index: 2;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(197,165,90,0.4), transparent);
+      margin: 8px 20px;
+    }
+
+    /* Download CTA — anchored to bottom of panel */
+    .cta-download {
+      position: relative;
+      z-index: 2;
+      padding: 8px 20px 16px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;  /* spreads content top-to-bottom, no dead gap */
-      min-height: 0;
+      gap: 8px;
     }
-
-    .cta-divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(197,165,90,0.35), transparent);
-      margin: 0;
-      flex-shrink: 0;
-    }
-
     .dl-eyebrow {
       font-family: var(--sans);
-      font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+      font-size: 8px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
       color: var(--gold); text-align: center;
     }
     .dl-title {
       font-family: var(--serif);
-      font-size: 16px; font-weight: 500; color: var(--white);
+      font-size: 15px; font-weight: 500; color: var(--white);
       text-align: center; line-height: 1.25;
     }
-
-    /* QR + URL side-by-side with phone — clean single block */
+    /* QR + phone — side by side */
     .dl-action-block {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 8px;
       padding: 12px;
       display: flex;
       align-items: center;
       gap: 12px;
     }
-    .dl-qr-img {
-      width: 70px; height: 70px;
-      border-radius: 5px;
-      flex-shrink: 0;
-      display: block;
-    }
+    .dl-qr-img { width: 68px; height: 68px; border-radius: 5px; flex-shrink: 0; display: block; }
     .dl-action-text { flex: 1; }
-    .dl-action-label {
-      font-family: var(--sans);
-      font-size: 7.5px; font-weight: 700; letter-spacing: 2.5px;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 3px;
-    }
-    .dl-url {
-      font-family: var(--sans);
-      font-size: 11px; font-weight: 600; color: var(--white);
-      margin-bottom: 10px; display: block;
-    }
-    .dl-phone-label {
-      font-family: var(--sans);
-      font-size: 7.5px; font-weight: 700; letter-spacing: 2.5px;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 3px;
-    }
-    .dl-phone-val {
-      font-family: var(--sans);
-      font-size: 17px; font-weight: 700; color: var(--white);
-    }
+    .dl-action-label { font-family: var(--sans); font-size: 7px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+    .dl-url { font-family: var(--sans); font-size: 10.5px; font-weight: 600; color: var(--white); margin-bottom: 8px; display: block; }
+    .dl-phone-label { font-family: var(--sans); font-size: 7px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+    .dl-phone-val { font-family: var(--sans); font-size: 17px; font-weight: 700; color: var(--white); }
 
-    .dl-bottom {
-      text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding-top: 10px;
-      margin-top: auto;
-    }
-    .dl-logo { height: 22px; width: auto; filter: brightness(0) invert(1); opacity: 0.4; margin-bottom: 3px; }
-    .dl-fid { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--gold); }
+    .dl-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px; }
+    .dl-logo { height: 20px; width: auto; filter: brightness(0) invert(1); opacity: 0.4; margin-bottom: 2px; }
+    .dl-fid { font-family: var(--serif); font-style: italic; font-size: 11px; color: var(--gold); }
 
     @media print {
       body { background: none; padding: 0; }
@@ -687,8 +664,7 @@
     .villain-stat     { font-size: 11px; padding: 10px 12px; }
     .villain-stat strong { font-size: 24px; }
 
-    /* Inside — CTA panel */
-    .cta-photo-caption span { font-size: 14px; }
+    /* Inside — CTA panel — full bleed photo, no caption needed */
   </style>
 </head>
 <body>
