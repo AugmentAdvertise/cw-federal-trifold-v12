@@ -512,10 +512,13 @@
       z-index: 0;
     }
     .cta-photo-img {
-      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-      background-image: url('assets/family-flag.jpg');
-      background-size: cover;
-      background-position: center center;
+      position: absolute; top: 0; left: 0; right: 0;
+      z-index: 0;
+    }
+    .cta-photo-img img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
     /* Gradient: photo visible top half → solid navy bottom half */
     .cta-photo-fade {
@@ -523,11 +526,11 @@
       background: linear-gradient(
         180deg,
         rgba(8,30,63,0.00) 0%,
-        rgba(8,30,63,0.00) 40%,
-        rgba(8,30,63,0.40) 52%,
-        rgba(8,30,63,0.85) 60%,
-        rgba(8,30,63,0.98) 68%,
-        rgba(8,30,63,1.00) 74%
+        rgba(8,30,63,0.00) 25%,
+        rgba(8,30,63,0.30) 35%,
+        rgba(8,30,63,0.75) 45%,
+        rgba(8,30,63,0.96) 52%,
+        rgba(8,30,63,1.00) 58%
       );
     }
     .cta-photo-caption { display: none; }
@@ -974,7 +977,7 @@
 
     <!-- Full panel background photo + gradient overlay -->
     <div class="cta-photo">
-      <div class="cta-photo-img"></div>
+      <div class="cta-photo-img"><img src="assets/family-flag.jpg" alt="Family with American flag"></div>
       <div class="cta-photo-fade"></div>
     </div>
 
