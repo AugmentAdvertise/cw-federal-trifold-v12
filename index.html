@@ -516,28 +516,32 @@
       position: absolute; inset: 0;
       background-image: url('assets/family-flag.jpg');
       background-size: cover;
-      background-position: center 20%;  /* shows heads, not just bodies */
+      background-position: center 45%;  /* center on the family, not the sky */
     }
-    /* Gradient: transparent at top → solid navy from 40% down */
+    /* Gradient: photo visible top half → solid navy bottom half */
     .cta-photo-fade {
       position: absolute; inset: 0;
       background: linear-gradient(
         180deg,
-        rgba(8,30,63,0.10) 0%,
-        rgba(8,30,63,0.20) 25%,
-        rgba(8,30,63,0.75) 45%,
-        rgba(8,30,63,0.95) 60%,
-        rgba(8,30,63,1.00) 75%
+        rgba(8,30,63,0.05) 0%,
+        rgba(8,30,63,0.10) 35%,
+        rgba(8,30,63,0.80) 55%,
+        rgba(8,30,63,0.97) 68%,
+        rgba(8,30,63,1.00) 78%
       );
     }
-    .cta-photo-caption { display: none; } /* not needed — overlay text replaces it */
+    .cta-photo-caption { display: none; }
 
-    /* All content sits above the photo overlay */
-    .cta-success {
-      position: relative;
+    /* Single content block — anchored to bottom, no dead space */
+    .cta-content-block {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
       z-index: 2;
-      margin-top: 2.6in;  /* push content below the visible photo area */
-      padding: 10px 20px 8px;
+      display: flex;
+      flex-direction: column;
+    }
+    .cta-success {
+      padding: 10px 20px 6px;
       color: var(--white);
       background: transparent;
     }
@@ -558,14 +562,11 @@
       margin: 8px 20px;
     }
 
-    /* Download CTA — anchored to bottom of panel */
     .cta-download {
-      position: relative;
-      z-index: 2;
-      padding: 8px 20px 16px;
+      padding: 6px 20px 16px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 7px;
     }
     .dl-eyebrow {
       font-family: var(--sans);
@@ -959,55 +960,53 @@
     </div>
   </div>
 
-  <!-- INSIDE RIGHT — Family Photo + Success + Free Download -->
+  <!-- INSIDE RIGHT — Full bleed family photo + hero narrative anchored at bottom -->
   <div class="panel p-cta">
     <div class="stripe"></div>
 
-    <!-- Family photo -->
+    <!-- Full panel background photo + gradient overlay -->
     <div class="cta-photo">
       <div class="cta-photo-img"></div>
       <div class="cta-photo-fade"></div>
-      <div class="cta-photo-caption">
-        <span>This is what you are working toward.</span>
+    </div>
+
+    <!-- All content anchored to bottom — sits in the navy gradient zone -->
+    <div class="cta-content-block">
+
+      <!-- Hero: success checklist -->
+      <div class="cta-success">
+        <div class="success-stars">&#9733; &nbsp; &#9733; &nbsp; &#9733;</div>
+        <div class="success-title">With a Plan, You Retire with Confidence</div>
+        <div class="success-item"><div class="s-mark">&#10003;</div><span>Your FERS income verified <strong>to the dollar</strong></span></div>
+        <div class="success-item"><div class="s-mark">&#10003;</div><span>Your TSP positioned for <strong>income, not just growth</strong></span></div>
+        <div class="success-item"><div class="s-mark">&#10003;</div><span>Your FEGLI restructured &mdash; <strong>thousands saved annually</strong></span></div>
+        <div class="success-item"><div class="s-mark">&#10003;</div><span>Your FEHB and Medicare coordinated &mdash; <strong>no surprises</strong></span></div>
+        <div class="success-item"><div class="s-mark">&#10003;</div><span>Your Social Security timed to <strong>maximize lifetime income</strong></span></div>
       </div>
-    </div>
 
-    <!-- Success panel -->
-    <div class="cta-success">
-      <div class="success-stars">&#9733; &nbsp; &#9733; &nbsp; &#9733;</div>
-      <div class="success-title">With a Plan, You Retire with Confidence</div>
-      <div class="success-item"><div class="s-mark">&#10003;</div><span>Your FERS income verified <strong>to the dollar</strong></span></div>
-      <div class="success-item"><div class="s-mark">&#10003;</div><span>Your TSP positioned for <strong>income, not just growth</strong></span></div>
-      <div class="success-item"><div class="s-mark">&#10003;</div><span>Your FEGLI restructured &mdash; <strong>thousands saved annually</strong></span></div>
-      <div class="success-item"><div class="s-mark">&#10003;</div><span>Your FEHB and Medicare coordinated &mdash; <strong>no surprises</strong></span></div>
-      <div class="success-item"><div class="s-mark">&#10003;</div><span>Your Social Security timed to <strong>maximize lifetime income</strong></span></div>
-    </div>
+      <!-- Gold divider -->
+      <div class="cta-divider"></div>
 
-    <!-- Gold divider — subtle, no hard line -->
-    <div class="cta-divider"></div>
-
-    <!-- Free download CTA -->
-    <div class="cta-download">
-      <div class="dl-eyebrow">Free Download</div>
-      <div class="dl-title">The Federal Employees&rsquo; Retirement Readiness Guide</div>
-
-      <!-- QR + URL + Phone in one clean block -->
-      <div class="dl-action-block">
-        <img src="assets/qr-federal-guide.png" alt="Scan to download" class="dl-qr-img">
-        <div class="dl-action-text">
-          <div class="dl-action-label">Scan to Download</div>
-          <div class="dl-url">capitalwealth.com<br>/federal-guide</div>
-          <div class="dl-phone-label">Call Us Directly</div>
-          <div class="dl-phone-val">801.210.2800</div>
+      <!-- Download CTA -->
+      <div class="cta-download">
+        <div class="dl-eyebrow">Free Download</div>
+        <div class="dl-title">The Federal Employees&rsquo; Retirement Readiness Guide</div>
+        <div class="dl-action-block">
+          <img src="assets/qr-federal-guide.png" alt="Scan to download" class="dl-qr-img">
+          <div class="dl-action-text">
+            <div class="dl-action-label">Scan to Download</div>
+            <div class="dl-url">capitalwealth.com/federal-guide</div>
+            <div class="dl-phone-label">Call Us Directly</div>
+            <div class="dl-phone-val">801.210.2800</div>
+          </div>
+        </div>
+        <div class="dl-bottom">
+          <img src="assets/cw-logo-white.png" alt="Capital Wealth" class="dl-logo">
+          <div class="dl-fid">Fiduciary. Always.</div>
         </div>
       </div>
 
-      <div class="dl-bottom">
-        <img src="assets/cw-logo-white.png" alt="Capital Wealth" class="dl-logo">
-        <div class="dl-fid">Fiduciary. Always.</div>
-      </div>
     </div>
-
   </div>
 
 </div>
