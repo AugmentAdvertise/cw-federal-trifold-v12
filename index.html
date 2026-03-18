@@ -515,7 +515,7 @@
       position: absolute; top: 0; left: 0; right: 0; bottom: 0;
       background-image: url('assets/family-flag.jpg');
       background-size: cover;
-      background-position: center 40%;  /* landscape crop: keep family centered vertically */
+      background-position: center top;  /* family flush to top — no dead space above heads */
     }
     /* Gradient: photo visible top half → solid navy bottom half */
     .cta-photo-fade {
@@ -523,10 +523,10 @@
       background: linear-gradient(
         180deg,
         rgba(8,30,63,0.00) 0%,
-        rgba(8,30,63,0.03) 30%,
-        rgba(8,30,63,0.35) 48%,
-        rgba(8,30,63,0.80) 60%,
-        rgba(8,30,63,0.96) 70%,
+        rgba(8,30,63,0.02) 35%,
+        rgba(8,30,63,0.25) 50%,
+        rgba(8,30,63,0.70) 60%,
+        rgba(8,30,63,0.94) 70%,
         rgba(8,30,63,1.00) 80%
       );
     }
@@ -539,6 +539,9 @@
       z-index: 2;
       display: flex;
       flex-direction: column;
+    }
+    .cta-success {
+      padding-top: 16px;
     }
     .cta-success {
       padding: 10px 20px 6px;
