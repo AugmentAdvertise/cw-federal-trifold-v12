@@ -358,8 +358,8 @@
     .prog-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(4, 1fr);
-      gap: 8px;
+      grid-template-rows: repeat(4, auto);
+      gap: 6px;
       flex: 1;
       min-height: 0;
     }
@@ -685,7 +685,7 @@
     .step-d         { font-size: 12px; line-height: 1.5; }
     .prog h4        { font-size: 16px; }
     .prog p         { font-size: 15px; line-height: 1.4; }
-    .prog ul        { font-size: 15px; line-height: 1.4; }
+    .prog ul        { font-size: 14px; line-height: 1.35; }
     .prog .fed      { font-size: 13px; }
     .plan-foot      { font-size: 19px; }
 
@@ -986,34 +986,28 @@
           </ul>
         </div>
 
-        <!-- v13: Retirement Timing — expanded per brief -->
+        <!-- v13: Retirement Timing — condensed to fit panel -->
         <div class="prog">
           <h4>Retirement Timing</h4>
           <ul>
-            <li>MRA</li>
-            <li>MRA plus 10</li>
-            <li>Age 60</li>
-            <li>Age 62 and beyond</li>
-            <li>Medicare Part B timing</li>
-            <li>Avoiding IRMAA surcharges</li>
+            <li>MRA / MRA+10 / 60 / 62+</li>
+            <li>Medicare Part B election</li>
+            <li>IRMAA surcharges avoided</li>
             <li>FEHB coordination</li>
-            <li>Withdrawals managed</li>
+            <li>Withdrawals &amp; income managed</li>
           </ul>
         </div>
 
-        <!-- v13: Medicare + IRMAA removed, replaced with Tax & Estate per brief -->
-        <div class="prog">
+        <!-- v13: Tax & Estate per brief — spans full width as 7th box -->
+        <div class="prog" style="grid-column: 1 / -1;">
           <h4>Tax &amp; Estate</h4>
           <ul>
-            <li>Taxability of Social Security benefits</li>
+            <li>Social Security taxability</li>
             <li>Withdrawal sequence strategy</li>
             <li>Possible Roth conversion</li>
             <li>Beneficiaries audited</li>
           </ul>
         </div>
-
-        <!-- 8th box empty to maintain grid balance — or we can remove. Using a spacer -->
-        <div class="prog" style="border-top-color: transparent; background: transparent;"></div>
       </div>
 
       <div style="margin-top:auto;padding-top:8px;border-top:1px solid var(--lt-grey);">
