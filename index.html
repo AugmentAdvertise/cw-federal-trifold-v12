@@ -767,33 +767,54 @@
   </div>
 
   <!-- BACK COVER — outside-center (unchanged from v12) -->
-  <div class="panel p-back">
+  <div class="panel p-back" style="background:var(--blue-deep);color:var(--white);">
     <div class="stripe"></div>
-    <div class="back-in">
-      <div>
-        <div class="about" style="margin-top:8px;"><strong>You earned something valuable. We make sure you keep it.</strong></div>
-        <div class="rule-gold"></div>
-        <div class="stat"><span class="stat-dash">&mdash;</span><p><strong>500+ federal employees</strong> served</p></div>
-        <div class="stat"><span class="stat-dash">&mdash;</span><p><strong>25+ years</strong> fiduciary financial planning</p></div>
-        <div class="stat"><span class="stat-dash">&mdash;</span><p>Host of <strong>Retire Right Radio</strong></p></div>
-      </div>
-      <div>
-        <div style="background:var(--white);border:2px solid var(--gold);border-radius:10px;padding:16px;text-align:center;margin-bottom:14px;">
-          <img src="assets/qr-federal-guide.png" alt="Scan for your complimentary Federal Benefits Analysis" style="width:120px;height:120px;border-radius:6px;margin-bottom:10px;">
-          <div style="font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Complimentary Federal Benefits Analysis</div>
-          <div style="font-family:var(--sans);font-size:13px;color:var(--blue);font-weight:600;margin-bottom:12px;">capitalwealth.com/federal-guide</div>
-          <div style="font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Call Us Directly</div>
-          <div style="font-family:var(--sans);font-size:24px;font-weight:700;color:var(--blue);">801.210.2800</div>
+    <div style="height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:0;">
+
+      <!-- TOP ZONE: Authority statement + stats on deep blue -->
+      <div style="padding:32px 28px 24px;flex:1;display:flex;flex-direction:column;justify-content:center;">
+        <div style="font-family:var(--serif);font-size:38px;font-weight:500;color:var(--white);line-height:1.25;margin-bottom:24px;">You Earned<br>Something<br>Valuable.</div>
+        <div style="font-family:var(--sans);font-size:20px;color:rgba(255,255,255,0.7);margin-bottom:28px;line-height:1.5;">We make sure you keep it.</div>
+
+        <div style="border-top:1.5px solid var(--gold);padding-top:20px;">
+          <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px;">
+            <span style="font-family:var(--serif);font-size:44px;font-weight:500;color:var(--gold);line-height:1;">500+</span>
+            <span style="font-family:var(--sans);font-size:18px;color:rgba(255,255,255,0.75);">federal employees served</span>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px;">
+            <span style="font-family:var(--serif);font-size:44px;font-weight:500;color:var(--gold);line-height:1;">25+</span>
+            <span style="font-family:var(--sans);font-size:18px;color:rgba(255,255,255,0.75);">years fiduciary planning</span>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:10px;">
+            <span style="font-family:var(--sans);font-size:18px;color:rgba(255,255,255,0.75);">Host of</span>
+            <span style="font-family:var(--serif);font-size:28px;font-weight:500;font-style:italic;color:var(--gold);">Retire Right Radio</span>
+          </div>
         </div>
-        <div class="testimonial">
-          <p>&ldquo;22 years at Hill AFB. One visit showed I was on track to overpay $47,000 in taxes. Fixed before I filed a single form.&rdquo;</p>
-          <div class="att">&mdash; Federal employee, Weber County, Utah</div>
+      </div>
+
+      <!-- MIDDLE: QR + CTA compact row -->
+      <div style="background:rgba(255,255,255,0.06);border-top:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);padding:18px 24px;display:flex;align-items:center;gap:16px;">
+        <img src="assets/qr-federal-guide.png" alt="Get your complimentary Federal Benefits Analysis" style="width:90px;height:90px;border-radius:6px;flex-shrink:0;">
+        <div style="flex:1;">
+          <div style="font-family:var(--sans);font-size:15px;font-weight:700;color:var(--white);margin-bottom:6px;">Get Your Complimentary Federal Benefits Analysis</div>
+          <div style="font-family:var(--sans);font-size:13px;color:var(--gold);margin-bottom:10px;">capitalwealth.com/federal-guide</div>
+          <div style="font-family:var(--sans);font-size:26px;font-weight:700;color:var(--white);">801.210.2800</div>
         </div>
       </div>
-      <div class="back-foot">
-        <a href="https://www.capitalwealth.com">capitalwealth.com</a> &nbsp;&middot;&nbsp; 801.210.2800
-        <div class="back-fid">Fiduciary. Always.</div>
+
+      <!-- BOTTOM: Testimonial + Fiduciary anchor -->
+      <div style="padding:20px 28px 24px;">
+        <div style="border-left:4px solid var(--gold);padding-left:16px;margin-bottom:20px;">
+          <p style="font-family:var(--serif);font-style:italic;font-size:20px;color:rgba(255,255,255,0.85);line-height:1.6;margin:0 0 8px;">&ldquo;22 years at Hill AFB. One visit showed I was on track to overpay $47,000 in taxes. Fixed before I filed a single form.&rdquo;</p>
+          <div style="font-family:var(--sans);font-size:14px;font-weight:600;color:var(--gold);">&mdash; Federal employee, Weber County, Utah</div>
+        </div>
+
+        <div style="text-align:center;border-top:1px solid rgba(197,165,90,0.3);padding-top:16px;">
+          <img src="assets/cw-logo-white.png" alt="Capital Wealth" style="height:36px;width:auto;filter:brightness(0) invert(1);opacity:0.5;margin-bottom:8px;">
+          <div style="font-family:var(--serif);font-style:italic;font-size:28px;color:var(--gold);letter-spacing:1px;">Fiduciary. Always.</div>
+        </div>
       </div>
+
     </div>
   </div>
 
