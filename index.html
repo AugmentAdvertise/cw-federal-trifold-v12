@@ -366,7 +366,7 @@
     .prog {
       background: var(--lt-grey);
       border-radius: 5px;
-      padding: 10px 12px;
+      padding: 12px 14px;
       border-top: 3px solid var(--blue);
       display: flex;
       flex-direction: column;
@@ -388,7 +388,7 @@
       background: var(--white);
     }
     .villain-in {
-      padding: 14px 16px 12px;
+      padding: 22px 18px 16px;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -677,27 +677,27 @@
     .qr-lbl         { font-size: 15px; }
     .qr-url         { font-size: 15px; }
 
-    /* Inside — plan */
+    /* Inside — plan — LARGE PRINT for senior audience */
     .plan-title     { font-size: 30px; }
     .plan-sub       { font-size: 16px; }
     .step-n         { font-size: 32px; }
     .step-lbl       { font-size: 13px; }
     .step-d         { font-size: 12px; line-height: 1.5; }
-    .prog h4        { font-size: 14px; }
-    .prog p         { font-size: 13px; line-height: 1.35; }
-    .prog ul        { font-size: 13px; line-height: 1.35; }
-    .prog .fed      { font-size: 11px; }
+    .prog h4        { font-size: 16px; }
+    .prog p         { font-size: 15px; line-height: 1.4; }
+    .prog ul        { font-size: 15px; line-height: 1.4; }
+    .prog .fed      { font-size: 13px; }
     .plan-foot      { font-size: 16px; }
 
-    /* Inside — villain */
+    /* Inside — villain — LARGE PRINT for senior audience */
     .villain-eyebrow { font-size: 14px; }
     .villain-title   { font-size: 30px; }
-    .villain-sub     { font-size: 16px; line-height: 1.5; }
+    .villain-sub     { font-size: 18px; line-height: 1.55; }
     .retire-label    { font-size: 14px; }
     .retire-amount   { font-size: 40px; line-height: 1.2; }
     .retire-desc     { font-size: 15px; line-height: 1.4; }
-    .compare-table th { font-size: 14px; padding: 10px 14px; }
-    .compare-table td { font-size: 16px; padding: 7px 12px; line-height: 1.45; }
+    .compare-table th { font-size: 15px; padding: 10px 12px; }
+    .compare-table td { font-size: 16px; padding: 8px 12px; line-height: 1.45; }
     .villain-stat     { font-size: 18px; padding: 14px 18px; }
     .villain-stat strong { font-size: 42px; }
   </style>
@@ -861,13 +861,9 @@
     <div class="villain-in">
 
       <div class="villain-eyebrow">Be Ready with a Plan</div>
-      <!-- v13: "Most" → "Many" -->
       <div class="villain-title">Many Federal Employees Leave Hundreds of Thousands Behind.</div>
-      <div class="villain-sub">Not bad investments. Avoidable mistakes.</div>
+      <div class="villain-sub">Not bad investments. Avoidable mistakes. Here's what the difference looks like:</div>
 
-      <!-- v13: Remove dollar amounts from this section -->
-
-      <!-- v13: Updated comparison table per change brief -->
       <table class="compare-table">
         <thead>
           <tr>
@@ -877,32 +873,32 @@
         </thead>
         <tbody>
           <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>FERS estimate off</td>
-            <td class="good-col"><span class="ck">&#10003;</span>Estimate verified for accuracy</td>
+            <td class="bad-col"><span class="x">&#10007;</span>FERS estimate off &mdash; retire expecting more than you get</td>
+            <td class="good-col"><span class="ck">&#10003;</span>Pension verified with real numbers</td>
           </tr>
           <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>TSP on default, never reviewed</td>
-            <td class="good-col"><span class="ck">&#10003;</span>Optimized for risk tolerance</td>
+            <td class="bad-col"><span class="x">&#10007;</span>TSP on default funds, never reviewed</td>
+            <td class="good-col"><span class="ck">&#10003;</span>Optimized for your risk tolerance</td>
           </tr>
           <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>FEGLI spikes after 45</td>
-            <td class="good-col"><span class="ck">&#10003;</span>Restructured for life insurance need</td>
+            <td class="bad-col"><span class="x">&#10007;</span>FEGLI costs spike after 45</td>
+            <td class="good-col"><span class="ck">&#10003;</span>Restructured for actual need</td>
           </tr>
           <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>Wrong FEHB plan</td>
-            <td class="good-col"><span class="ck">&#10003;</span>Assessing appropriate coverage</td>
+            <td class="bad-col"><span class="x">&#10007;</span>Wrong FEHB plan &mdash; overpaying</td>
+            <td class="good-col"><span class="ck">&#10003;</span>Right plan, coordinated with Medicare</td>
           </tr>
           <tr>
             <td class="bad-col"><span class="x">&#10007;</span>Social Security filed too early</td>
-            <td class="good-col"><span class="ck">&#10003;</span>Optimized benefit timing</td>
+            <td class="good-col"><span class="ck">&#10003;</span>Timed for maximum lifetime benefit</td>
           </tr>
           <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>Wrong Medicare election</td>
-            <td class="good-col"><span class="ck">&#10003;</span>Medicare and FEHB coordinated</td>
+            <td class="bad-col"><span class="x">&#10007;</span>Medicare elected wrong &mdash; IRMAA hits</td>
+            <td class="good-col"><span class="ck">&#10003;</span>Medicare + FEHB coordinated</td>
           </tr>
           <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>Overpaying lifetime taxes</td>
-            <td class="good-col"><span class="ck">&#10003;</span>Intentional tax strategy</td>
+            <td class="bad-col"><span class="x">&#10007;</span>Overpaying taxes every year</td>
+            <td class="good-col"><span class="ck">&#10003;</span>Intentional tax strategy built</td>
           </tr>
         </tbody>
       </table>
