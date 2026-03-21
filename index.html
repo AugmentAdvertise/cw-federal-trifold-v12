@@ -127,7 +127,7 @@
     .pain {
       border-left: 5px solid var(--red);
       padding: 8px 12px;
-      margin-bottom: 7px;
+      margin-bottom: 6px;
       background: var(--lt-grey);
       border-radius: 0 6px 6px 0;
     }
@@ -297,7 +297,7 @@
       font-weight: 700;
       color: var(--white);
       letter-spacing: 0.5px;
-      width: 52px;
+      width: 62px;
       flex-shrink: 0;
     }
     .cover-prog-desc {
@@ -334,15 +334,15 @@
       border-right: 1px solid #e8e8e8;
     }
     .plan-in {
-      padding: 14px 14px 10px;
+      padding: 12px 14px 8px;
       height: 100%;
       display: flex;
       flex-direction: column;
       overflow: hidden;
     }
-    .plan-eyebrow { font-family: var(--sans); font-size: 16px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-    .plan-title { font-family: var(--serif); font-size: 20px; font-weight: 500; color: var(--blue); line-height: 1.2; margin-bottom: 3px; }
-    .plan-sub { font-family: var(--serif); font-style: italic; font-size: 11px; color: var(--grey); margin-bottom: 8px; }
+    .plan-eyebrow { font-family: var(--sans); font-size: 16px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .plan-title { font-family: var(--serif); font-size: 20px; font-weight: 500; color: var(--blue); line-height: 1.2; margin-bottom: 2px; }
+    .plan-sub { font-family: var(--serif); font-style: italic; font-size: 11px; color: var(--grey); margin-bottom: 4px; }
 
     .steps { display: flex; gap: 4px; margin-bottom: 8px; }
     .step { flex: 1; background: var(--lt-grey); border-radius: 5px; padding: 7px 5px; text-align: center; position: relative; }
@@ -351,7 +351,7 @@
     .step-lbl { font-family: var(--sans); font-size: 8.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--blue); margin-top: 3px; }
     .step-d { font-size: 8px; color: var(--grey); margin-top: 3px; line-height: 1.4; }
 
-    .sec-break { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+    .sec-break { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
     .sec-break .bar { flex: 1; height: 1px; background: var(--lt-grey); }
     .sec-break .tag { font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); white-space: nowrap; }
 
@@ -359,7 +359,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(4, 1fr);
-      gap: 5px;
+      gap: 4px;
       flex: 1;
       min-height: 0;
     }
@@ -388,7 +388,7 @@
       background: var(--white);
     }
     .villain-in {
-      padding: 22px 18px 16px;
+      padding: 18px 16px 12px;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -644,62 +644,70 @@
        v11 FONT SIZE PASS — larger across all panels
     ===================================================== */
 
-    /* Outside — flap */
-    .flap-headline  { font-size: 38px; }
-    .flap-lead      { font-size: 20px; line-height: 1.7; }
-    .pain-q         { font-size: 24px; }
-    .pain-a         { font-size: 19px; line-height: 1.6; }
-    .flap-close     { font-size: 22px; line-height: 1.6; }
+    /* =====================================================
+       SENIOR-READABLE FONT OVERRIDES — FILL THE SPACE
+    ===================================================== */
 
-    /* Outside — back */
-    .about          { font-size: 22px; line-height: 1.7; }
-    .stat p         { font-size: 20px; line-height: 1.55; }
+    /* Outside — flap (pain points) */
+    .flap-headline  { font-size: 38px; }
+    .flap-lead      { font-size: 22px; line-height: 1.7; }
+    .pain-q         { font-size: 26px; }
+    .pain-a         { font-size: 21px; line-height: 1.55; }
+    .flap-close     { font-size: 24px; line-height: 1.55; }
+
+    /* Outside — back cover */
+    .about          { font-size: 24px; line-height: 1.65; }
+    .stat p         { font-size: 22px; line-height: 1.55; }
     .num-val        { font-size: 52px; }
     .num-lbl        { font-size: 16px; }
-    .testimonial p  { font-size: 20px; line-height: 1.65; }
-    .testimonial .att { font-size: 17px; }
-    .back-foot      { font-size: 17px; }
-    .back-fid       { font-size: 20px; }
+    .testimonial p  { font-size: 22px; line-height: 1.6; }
+    .testimonial .att { font-size: 18px; }
+    .back-foot      { font-size: 18px; }
+    .back-fid       { font-size: 22px; }
 
-    /* Outside — cover */
+    /* Outside — front cover */
     .cover-badge    { font-size: 15px; padding: 8px 22px; }
     .cover-logo     { height: 52px; }
-    .cover-h1       { font-size: 38px; }
+    .cover-h1       { font-size: 40px; }
     .cover-h2       { font-size: 38px; }
     .cover-prog-eyebrow { font-size: 15px; }
-    .cover-prog-name    { font-size: 22px; font-weight: 700; }
-    .cover-prog-desc    { font-size: 18px; line-height: 1.6; }
+    .cover-prog-name    { font-size: 24px; font-weight: 700; }
+    .cover-prog-desc    { font-size: 20px; line-height: 1.55; }
     .ev-lbl         { font-size: 15px; }
     .ev-line        { font-size: 18px; line-height: 2.1; }
     .sf182          { font-size: 15px; }
-    .cover-phone    { font-size: 28px; }
+    .cover-phone    { font-size: 30px; }
     .cover-web      { font-size: 16px; }
     .qr-lbl         { font-size: 15px; }
     .qr-url         { font-size: 15px; }
 
-    /* Inside — plan — LARGE PRINT for senior audience */
+    /* Inside — plan (program cards) — SENIOR LARGE PRINT */
     .plan-title     { font-size: 30px; }
-    .plan-sub       { font-size: 16px; }
+    .plan-sub       { font-size: 18px; }
     .step-n         { font-size: 32px; }
-    .step-lbl       { font-size: 13px; }
-    .step-d         { font-size: 12px; line-height: 1.5; }
-    .prog h4        { font-size: 16px; }
-    .prog p         { font-size: 15px; line-height: 1.4; }
-    .prog ul        { font-size: 15px; line-height: 1.4; }
-    .prog .fed      { font-size: 13px; }
-    .plan-foot      { font-size: 16px; }
+    .step-lbl       { font-size: 14px; }
+    .step-d         { font-size: 13px; line-height: 1.5; }
+    .prog h4        { font-size: 18px; }
+    .prog p         { font-size: 17px; line-height: 1.35; }
+    .prog ul        { font-size: 17px; line-height: 1.35; }
+    .prog .fed      { font-size: 15px; }
+    .plan-foot      { font-size: 18px; }
 
-    /* Inside — villain — LARGE PRINT for senior audience */
-    .villain-eyebrow { font-size: 14px; }
-    .villain-title   { font-size: 30px; }
-    .villain-sub     { font-size: 18px; line-height: 1.55; }
+    /* Inside — villain (comparison) — SENIOR LARGE PRINT */
+    .villain-eyebrow { font-size: 15px; }
+    .villain-title   { font-size: 32px; }
+    .villain-sub     { font-size: 20px; line-height: 1.5; }
     .retire-label    { font-size: 14px; }
     .retire-amount   { font-size: 40px; line-height: 1.2; }
     .retire-desc     { font-size: 15px; line-height: 1.4; }
-    .compare-table th { font-size: 15px; padding: 10px 12px; }
-    .compare-table td { font-size: 16px; padding: 8px 12px; line-height: 1.45; }
+    .compare-table th { font-size: 17px; padding: 10px 10px; }
+    .compare-table td { font-size: 18px; padding: 9px 10px; line-height: 1.4; }
     .villain-stat     { font-size: 18px; padding: 14px 18px; }
     .villain-stat strong { font-size: 42px; }
+
+    /* Inside — CTA (success checklist) */
+    .success-item   { font-size: 22px; margin-bottom: 12px; }
+    .success-title  { font-size: 34px; }
   </style>
 </head>
 <body>
@@ -929,8 +937,7 @@
         <div class="prog">
           <h4>FERS Pension</h4>
           <ul>
-            <li>Annuity amount</li>
-            <li>High-3</li>
+            <li>Annuity amount + High-3</li>
             <li>Survivor options</li>
             <li>Optimal retirement date</li>
           </ul>
@@ -1000,10 +1007,9 @@
         <div class="prog">
           <h4>Tax &amp; Estate</h4>
           <ul>
-            <li>Social Security taxability</li>
-            <li>Withdrawal sequence strategy</li>
-            <li>Possible Roth conversion</li>
-            <li>Beneficiaries audited</li>
+            <li>SS taxability analyzed</li>
+            <li>Withdrawal sequence</li>
+            <li>Roth + beneficiaries</li>
           </ul>
           <div class="fed">Intentional tax strategy built</div>
         </div>
